@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3 class="mb-0">Кликер!</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="lead mb-4">Количество кликов: <span class="fw-bold">{{ current_user.clicks }}</span></p>
+                        <a href="{{ url_for('click') }}" class="btn btn-success btn-lg">Кликни меня!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
